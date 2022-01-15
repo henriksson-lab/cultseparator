@@ -159,9 +159,11 @@ public class Main {
 				}
 				
 				
+				/*
 				System.out.println("########### "+
 						matchesA+"/"+sizeEntriesA+"  "+
 						matchesB+"/"+sizeEntriesB);			
+				*/
 
 				//Only bother if there are any matches
 				if(matchesA>0 || matchesB>0) {

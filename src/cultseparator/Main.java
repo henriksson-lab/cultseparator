@@ -98,6 +98,7 @@ public class Main {
 			//Loop through all SAM records
 			int readRecords=0;
 			int ambigous=0;
+			int unaligned=0;
 			for (final SAMRecord samRecord : reader) {
 				
 				//Update user about progress
@@ -108,6 +109,10 @@ public class Main {
 				}
 
 				String chrom=samRecord.getContig();
+				if(chrom==null) {
+					unaligned++;
+					continue;
+				}
 				if(!refA.entries.containsKey(chrom)) {
 					System.out.println("chrom not in vcf, "+chrom);
 					continue;
@@ -189,5 +194,6 @@ public class Main {
 
 			System.out.println("total records "+readRecords);
 			System.out.println("ambious: "+ambigous);
+			System.out.println("not aligned: "+unaligned);
 	}
 }

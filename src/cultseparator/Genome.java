@@ -25,8 +25,11 @@ public class Genome {
 		String line=null;
 		while((line=br.readLine())!=null) {
 			if(line.startsWith(">")) {
+				/*
 				if(seqname!=null)
 					break;  /// For now
+				*/
+				
 				if(sb!=null) {
 					System.out.println("add chrom: "+seqname+"  len "+sb.length());
 					seqs.put(seqname,sb.toString());

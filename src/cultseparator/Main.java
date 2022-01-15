@@ -102,7 +102,7 @@ public class Main {
 				
 				//Update user about progress
 				readRecords++;
-				if(readRecords%1000 == 0){
+				if(readRecords%1000000 == 0){
 					//Calculate progress
 					System.out.println("records so far: "+readRecords);
 				}
